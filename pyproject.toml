@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "w4h-demo-approximate-queries"
+version = "0.1.0"
+description = "Demo: fft_approximate approximate range-aggregate queries vs exact, on the Fitbit sample dataset"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "psycopg2-binary>=2.9",
+  "numpy>=1.24",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
